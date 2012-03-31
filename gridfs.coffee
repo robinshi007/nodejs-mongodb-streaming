@@ -36,7 +36,7 @@ exports.putFile = (path, name, options, fn) ->
     file.writeFile path, fn
 
 parse = (options) ->
-  opts = {}
+  opts = options || {} 
   if options.length > 0
     opts = options[0]
   if !opts.metadata

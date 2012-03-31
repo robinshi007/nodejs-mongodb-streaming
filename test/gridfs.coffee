@@ -19,7 +19,7 @@ describe "GridFS", ->
 
       it "should store store contents", (done) ->
         gridfs.get id, (err, store) ->
-          store.readBuffer (err, contents) ->
+          store.read (err, contents) ->
             contents.toString().should.equal "Hello World"
             done()
 
